@@ -10,7 +10,6 @@ prices = []     # List to store prices of the products
 
 sp = requests.get("https://jvbazar.com/shop/")
 sp = BeautifulSoup(sp.content, 'html.parser')
-
 for each in sp.find_all('div',  attrs={'class':'box-text box-text-products'}):
     # name = each.find('a', href=True, attrs={'class':'woocommerce-LoopProduct-link woocommerce-loop-product__link'})
     # price = each.find('span', attrs={'class':'woocommerce-Price-currencySymbol'})
